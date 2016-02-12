@@ -1,0 +1,26 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="havaonly_XMLViewResolvers:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/havaonly_XMLViewResolvers_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="javaonly_BeanNameViewResolver/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="javaonly_BeanNameViewResolver" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Spring-4.2.4.RELEASE" />
+          <element id="library" level="project" name="Spring MVC-4.2.4.RELEASE" />
+          <element id="library" level="application" name="jstl" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/jstl.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/jackson-core-asl-1.9.13.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/jackson-jaxrs-1.7.1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/jackson-mapper-asl-1.9.13.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/jackson-annotations-2.1.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/jackson-annotations-2.6.3.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/jackson-core-2.6.3.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/jackson-databind-2.6.3.jar" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
