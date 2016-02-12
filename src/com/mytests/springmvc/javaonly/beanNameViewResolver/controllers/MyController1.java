@@ -38,9 +38,10 @@ public class MyController1 {
     }
 
     @RequestMapping(method=RequestMethod.GET, value="/json/testorders/")
-    public ModelAndView getTrainsJson() {
+    public String getTrainsJson(Model modelArg) {
         TesterList list = new TesterList(testerDB.getTesters());
-        return new ModelAndView("testerOrderJsonView", "list",  list);
+        modelArg.addAttribute("list",  list);
+        return "testerOrderJsonView";
     }
 }
 
