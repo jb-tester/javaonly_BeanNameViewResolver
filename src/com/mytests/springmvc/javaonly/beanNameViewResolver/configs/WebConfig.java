@@ -55,7 +55,7 @@ public class WebConfig extends WebMvcConfigurerAdapter
  * view resolver is configured by configureViewResolvers() method overriding
  * *******************************
  */
-/*@Configuration
+@Configuration
 @EnableWebMvc
 @ComponentScan(basePackageClasses = MyController1.class)
 public class WebConfig extends WebMvcConfigurerAdapter
@@ -76,7 +76,7 @@ public class WebConfig extends WebMvcConfigurerAdapter
         registry.addRedirectViewController("/x3","/x1");
         }
 
-}*/
+}
 /**
  * *******************************
  * Created by Irina.Petrovskaya on 2/5/2016.
@@ -86,7 +86,7 @@ public class WebConfig extends WebMvcConfigurerAdapter
  * *******************************
  */
 
-@Configuration
+/*@Configuration
 @ComponentScan(basePackageClasses = MyController1.class)
 public class WebConfig extends WebMvcConfigurationSupport
 {
@@ -94,9 +94,10 @@ public class WebConfig extends WebMvcConfigurationSupport
     @Override
     public void configureViewResolvers(ViewResolverRegistry registry) {
         registry.beanName();
-        //registry.jsp();
+        registry.jsp();
         super.configureViewResolvers(registry);
     }
+
     // dummy view controllers - just to check support:
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
@@ -104,4 +105,4 @@ public class WebConfig extends WebMvcConfigurationSupport
         registry.addStatusController("/x2", HttpStatus.I_AM_A_TEAPOT);
         registry.addRedirectViewController("/x3", "/x1");
     }
-}
+}*/
