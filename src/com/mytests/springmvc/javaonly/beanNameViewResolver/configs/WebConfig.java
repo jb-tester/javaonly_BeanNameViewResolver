@@ -18,7 +18,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
  * view resolver is configured as @Bean-annotated method of ViewResolver type
  * *******************************
  */
-@Configuration
+/*@Configuration
 @EnableWebMvc
 @ComponentScan(basePackageClasses = MyController1.class)
 public class WebConfig extends WebMvcConfigurerAdapter
@@ -30,14 +30,14 @@ public class WebConfig extends WebMvcConfigurerAdapter
         viewResolver.setOrder(0);
         return viewResolver;
     }
-   /* @Bean
+   *//* @Bean
     public ViewResolver jspViewResolver() {
         InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
         viewResolver.setPrefix("/WEB-INF/");
         viewResolver.setSuffix(".jsp");
         viewResolver.setOrder(1);
         return viewResolver;
-    }*/
+    }*//*
 
     // dummy view controllers - just to check support:
     @Override
@@ -46,7 +46,7 @@ public class WebConfig extends WebMvcConfigurerAdapter
         registry.addStatusController("/x2", HttpStatus.I_AM_A_TEAPOT);
         registry.addRedirectViewController("/x3","/x1");
     }
-}
+}*/
 /**
  * *******************************
  * Created by Irina.Petrovskaya on 2/5/2016.
@@ -68,7 +68,13 @@ public class WebConfig extends WebMvcConfigurerAdapter
        // registry.jsp();
         super.configureViewResolvers(registry);
     }
-
+// dummy view controllers - just to check support:
+    @Override
+    public void addViewControllers(ViewControllerRegistry registry) {
+        registry.addViewController("/x1").setViewName("testerOrderJsonView");
+        registry.addStatusController("/x2", HttpStatus.I_AM_A_TEAPOT);
+        registry.addRedirectViewController("/x3","/x1");
+        }
 
 }*/
 /**
@@ -80,7 +86,7 @@ public class WebConfig extends WebMvcConfigurerAdapter
  * *******************************
  */
 
-/*@Configuration
+@Configuration
 @ComponentScan(basePackageClasses = MyController1.class)
 public class WebConfig extends WebMvcConfigurationSupport
 {
@@ -91,5 +97,11 @@ public class WebConfig extends WebMvcConfigurationSupport
         //registry.jsp();
         super.configureViewResolvers(registry);
     }
-
-}*/
+    // dummy view controllers - just to check support:
+    @Override
+    public void addViewControllers(ViewControllerRegistry registry) {
+        registry.addViewController("/x1").setViewName("testerOrderJsonView");
+        registry.addStatusController("/x2", HttpStatus.I_AM_A_TEAPOT);
+        registry.addRedirectViewController("/x3", "/x1");
+    }
+}
