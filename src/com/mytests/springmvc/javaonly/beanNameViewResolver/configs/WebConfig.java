@@ -39,6 +39,7 @@ public class WebConfig extends WebMvcConfigurerAdapter
         return viewResolver;
     }*/
 
+    // dummy view controllers - just to check support:
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/x1").setViewName("testerOrderJsonView");
