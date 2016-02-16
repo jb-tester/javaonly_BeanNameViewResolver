@@ -30,14 +30,14 @@ public class WebConfig extends WebMvcConfigurerAdapter
         viewResolver.setOrder(0);
         return viewResolver;
     }
-    @Bean
+   /* @Bean
     public ViewResolver jspViewResolver() {
         InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
         viewResolver.setPrefix("/WEB-INF/");
         viewResolver.setSuffix(".jsp");
         viewResolver.setOrder(1);
         return viewResolver;
-    }
+    }*/
 
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
@@ -64,7 +64,7 @@ public class WebConfig extends WebMvcConfigurerAdapter
     @Override
     public void configureViewResolvers(ViewResolverRegistry registry) {
         registry.beanName();
-        registry.jsp();
+       // registry.jsp();
         super.configureViewResolvers(registry);
     }
 
@@ -87,7 +87,7 @@ public class WebConfig extends WebMvcConfigurationSupport
     @Override
     public void configureViewResolvers(ViewResolverRegistry registry) {
         registry.beanName();
-        registry.jsp();
+        //registry.jsp();
         super.configureViewResolvers(registry);
     }
 
