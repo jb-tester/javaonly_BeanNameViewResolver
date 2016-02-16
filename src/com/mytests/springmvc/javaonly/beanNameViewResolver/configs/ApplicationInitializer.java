@@ -22,7 +22,7 @@ public class ApplicationInitializer extends AbstractAnnotationConfigDispatcherSe
 
     @Override
     protected Class<?>[] getServletConfigClasses() {
-        return new Class<?>[]{WebConfig.class,WebConfig2.class};
+        return new Class<?>[]{WebConfig.class,WebConfig1.class,WebConfig2.class};
     }
 
     @Override
